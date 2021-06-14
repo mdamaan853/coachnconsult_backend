@@ -9,7 +9,6 @@ module.exports = ({
             }
         })
     },
-
     loginUser: (req, res) => {
         mysql.query(`select * from users where email=?;`, [req.body.email], (err, data) => {
             if (err) {
